@@ -6,8 +6,8 @@
     "canAdmin": true,
     "canStar": true,
     "canDelete": true,
-    "slug": "dgx-spark",
-    "url": "/d/dgx-spark/dgx-spark",
+    "slug": "<gpu-node>",
+    "url": "/d/<gpu-node>/<gpu-node>",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2026-06-02T04:16:09Z",
     "updated": "2026-06-29T22:52:47Z",
@@ -964,7 +964,7 @@
     "timepicker": {},
     "timezone": "browser",
     "title": "DGX Spark",
-    "uid": "dgx-spark",
+    "uid": "<gpu-node>",
     "weekStart": ""
   }
 }

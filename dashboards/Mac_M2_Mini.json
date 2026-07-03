@@ -131,7 +131,7 @@
               "type": "prometheus",
               "uid": "PBFA97CFB590B2093"
             },
-            "expr": "100 - avg by(instance) (rate(node_cpu_seconds_total{mode=\"idle\",instance=\"192.168.100.102\"}[1m])) * 100",
+            "expr": "100 - avg by(instance) (rate(node_cpu_seconds_total{mode=\"idle\",instance=\"<internal-ip>\"}[1m])) * 100",
             "legendFormat": "CPU",
             "refId": "A"
           }
@@ -1093,7 +1093,7 @@
               "type": "prometheus",
               "uid": "PBFA97CFB590B2093"
             },
-            "expr": "rate(node_network_receive_bytes_total{device=\"en0\",instance=\"192.168.100.102\"}[5m])",
+            "expr": "rate(node_network_receive_bytes_total{device=\"en0\",instance=\"<internal-ip>\"}[5m])",
             "legendFormat": "RX",
             "refId": "A"
           },
@@ -1102,7 +1102,7 @@
               "type": "prometheus",
               "uid": "PBFA97CFB590B2093"
             },
-            "expr": "rate(node_network_transmit_bytes_total{device=\"en0\",instance=\"192.168.100.102\"}[5m])",
+            "expr": "rate(node_network_transmit_bytes_total{device=\"en0\",instance=\"<internal-ip>\"}[5m])",
             "legendFormat": "TX",
             "refId": "B"
           }

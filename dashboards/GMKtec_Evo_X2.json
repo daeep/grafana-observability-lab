@@ -6,8 +6,8 @@
     "canAdmin": true,
     "canStar": true,
     "canDelete": true,
-    "slug": "gmktec-evo-x2",
-    "url": "/d/ecb7587a-4914-42fb-bebf-07f17f8224cb/gmktec-evo-x2",
+    "slug": "<compute-node>-evo-x2",
+    "url": "/d/ecb7587a-4914-42fb-bebf-07f17f8224cb/<compute-node>-evo-x2",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2026-06-22T04:40:20Z",
     "updated": "2026-06-29T23:00:12Z",
@@ -125,7 +125,7 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "gmk_hw_Temperature_Core_Tctl_Tdie{instance=\"192.168.100.110\"}",
+            "expr": "gmk_hw_Temperature_Core_Tctl_Tdie{instance=\"<internal-ip>\"}",
             "refId": "A"
           }
         ],
@@ -183,7 +183,7 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "gmk_hw_Temperature_GPU_VR_SoC{instance=\"192.168.100.110\"}",
+            "expr": "gmk_hw_Temperature_GPU_VR_SoC{instance=\"<internal-ip>\"}",
             "refId": "A"
           }
         ],
@@ -241,7 +241,7 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "gmk_hw_Load_GPU_Core{instance=\"192.168.100.110\"}",
+            "expr": "gmk_hw_Load_GPU_Core{instance=\"<internal-ip>\"}",
             "refId": "A"
           }
         ],
@@ -344,22 +344,22 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "sum(rate(windows_cpu_time_total{instance=\"192.168.100.110\",mode=\"user\"}[5m])) * 100",
+            "expr": "sum(rate(windows_cpu_time_total{instance=\"<internal-ip>\",mode=\"user\"}[5m])) * 100",
             "legendFormat": "user",
             "refId": "A"
           },
           {
-            "expr": "sum(rate(windows_cpu_time_total{instance=\"192.168.100.110\",mode=\"privileged\"}[5m])) * 100",
+            "expr": "sum(rate(windows_cpu_time_total{instance=\"<internal-ip>\",mode=\"privileged\"}[5m])) * 100",
             "legendFormat": "system",
             "refId": "B"
           },
           {
-            "expr": "sum(rate(windows_cpu_time_total{instance=\"192.168.100.110\",mode=\"interrupt\"}[5m])) * 100",
+            "expr": "sum(rate(windows_cpu_time_total{instance=\"<internal-ip>\",mode=\"interrupt\"}[5m])) * 100",
             "legendFormat": "interrupt",
             "refId": "C"
           },
           {
-            "expr": "sum(rate(windows_cpu_time_total{instance=\"192.168.100.110\",mode=\"dpc\"}[5m])) * 100",
+            "expr": "sum(rate(windows_cpu_time_total{instance=\"<internal-ip>\",mode=\"dpc\"}[5m])) * 100",
             "legendFormat": "dpc",
             "refId": "D"
           }
@@ -463,12 +463,12 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "windows_memory_physical_total_bytes{instance=\"192.168.100.110\"} - windows_memory_available_bytes{instance=\"192.168.100.110\"}",
+            "expr": "windows_memory_physical_total_bytes{instance=\"<internal-ip>\"} - windows_memory_available_bytes{instance=\"<internal-ip>\"}",
             "legendFormat": "used",
             "refId": "A"
           },
           {
-            "expr": "windows_memory_available_bytes{instance=\"192.168.100.110\"}",
+            "expr": "windows_memory_available_bytes{instance=\"<internal-ip>\"}",
             "legendFormat": "available",
             "refId": "B"
           }
@@ -572,12 +572,12 @@
         "pluginVersion": "12.3.1",
         "targets": [
           {
-            "expr": "sum(rate(windows_net_bytes_received_total{instance=\"192.168.100.110\"}[5m]))",
+            "expr": "sum(rate(windows_net_bytes_received_total{instance=\"<internal-ip>\"}[5m]))",
             "legendFormat": "in",
             "refId": "A"
           },
           {
-            "expr": "sum(rate(windows_net_bytes_sent_total{instance=\"192.168.100.110\"}[5m]))",
+            "expr": "sum(rate(windows_net_bytes_sent_total{instance=\"<internal-ip>\"}[5m]))",
             "legendFormat": "out",
             "refId": "B"
           }
@@ -617,7 +617,7 @@
         },
         "targets": [
           {
-            "expr": "sum(rate(stt_requests_total{instance=\"192.168.100.110\"}[5m]))",
+            "expr": "sum(rate(stt_requests_total{instance=\"<internal-ip>\"}[5m]))",
             "legendFormat": "requests/s",
             "refId": "A"
           }
@@ -646,7 +646,7 @@
         },
         "targets": [
           {
-            "expr": "sum(rate(tts_requests_total{instance=\"192.168.100.110\"}[5m]))",
+            "expr": "sum(rate(tts_requests_total{instance=\"<internal-ip>\"}[5m]))",
             "legendFormat": "requests/s",
             "refId": "A"
           }
@@ -679,7 +679,7 @@
         },
         "targets": [
           {
-            "expr": "sum(stt_requests_total{instance=\"192.168.100.110\"})",
+            "expr": "sum(stt_requests_total{instance=\"<internal-ip>\"})",
             "refId": "A"
           }
         ],
@@ -712,7 +712,7 @@
         },
         "targets": [
           {
-            "expr": "sum(stt_audio_seconds_total{instance=\"192.168.100.110\"}) / 3600",
+            "expr": "sum(stt_audio_seconds_total{instance=\"<internal-ip>\"}) / 3600",
             "refId": "A"
           }
         ],
@@ -744,7 +744,7 @@
         },
         "targets": [
           {
-            "expr": "sum(tts_requests_total{instance=\"192.168.100.110\"})",
+            "expr": "sum(tts_requests_total{instance=\"<internal-ip>\"})",
             "refId": "A"
           }
         ],
@@ -776,7 +776,7 @@
         },
         "targets": [
           {
-            "expr": "sum(tts_chars_total{instance=\"192.168.100.110\"})",
+            "expr": "sum(tts_chars_total{instance=\"<internal-ip>\"})",
             "refId": "A"
           }
         ],
@@ -789,7 +789,7 @@
     "schemaVersion": 42,
     "tags": [
       "windows",
-      "gmktec"
+      "<compute-node>"
     ],
     "templating": {
       "list": []
